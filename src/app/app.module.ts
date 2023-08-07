@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { CocktailService } from './pages/cocktail/cocktail.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatIconModule
   ],
-  providers: [],
+  providers: [CocktailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

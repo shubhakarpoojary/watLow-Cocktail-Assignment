@@ -23,11 +23,14 @@ export class CocktailService {
   ]
   constructor(private http: HttpClient) { }
 
-  getCocktailList(category: string): Observable<any[]> {
+   getCocktailList(category: string): Observable<any[]> {
     return this.http.get<any[]>(this.cocktailListUrl + `${category}`)
       .pipe(
         tap(data =>
           console.log('cocktail List: ' + JSON.stringify(data)))
       );
   }
+
+
+
 }

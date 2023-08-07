@@ -21,7 +21,9 @@ export class CocktailDetailsComponent implements OnInit  {
     this.drink = this._route.snapshot.params['category'];
 
     if (!this._cocktailService.cocktailObject) {
-      this._snackBar.open('please select a Cocktail!', 'Ok');
+      this._snackBar.open('please select a Cocktail!', 'Ok', {
+        duration: 2000
+      });
       this._router.navigateByUrl(`/cocktail/list/${this.category}`);
     }
   }
