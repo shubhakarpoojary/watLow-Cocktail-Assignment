@@ -1,0 +1,27 @@
+<div fxLayout="column wrap">
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+
+    <ng-container *ngFor="let cat of categoryList">
+      <div
+        fxFlex="25%"
+        fxFlex.md="50%"
+        fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        fxLayout="column wrap" class="myCard">
+        <mat-card class="zoom" (click)="viewCockTailList(cat.code)">
+          <mat-card-header>
+            <mat-card-title>{{ cat.name }}</mat-card-title>
+          </mat-card-header>
+          <br />
+          <img
+            mat-card-image
+            style="width: 100%"
+            [src]="cat.img"
+          />
+        </mat-card>
+      </div>
+    </ng-container>
+
+
+  </div>
+</div>

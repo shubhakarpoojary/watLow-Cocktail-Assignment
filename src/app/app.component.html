@@ -1,0 +1,48 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+    justify-content: center;
+  }
+
+
+
+  .content {
+    display: flex;
+    margin-top: 82px;
+    width: 100%;
+  }
+
+</style>
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+  <a routerLink="./cocktail" style="color: white;"><mat-icon>home</mat-icon></a>
+  <span> &nbsp; Welcome To My Cocktail</span>
+
+</div>
+
+<div class="content">
+
+<router-outlet></router-outlet>
+
+</div>

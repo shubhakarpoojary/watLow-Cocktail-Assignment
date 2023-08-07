@@ -1,0 +1,35 @@
+<div fxLayout="column wrap">
+  <div fxLayout="row wrap">
+    <ng-container *ngFor="let cocktail of cocktailList">
+      <div
+        fxFlex="25%"
+        fxFlex.md="50%"
+        fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        fxLayout="column wrap" class="myCard">
+        <mat-card class="zoom" (click)="viewCockTaiDetails(cocktail)">
+          <mat-card-header>
+            <mat-card-title>{{ cocktail.strDrink }}</mat-card-title>
+          </mat-card-header>
+          <br />
+          <img
+            mat-card-image
+            style="width: 100%"
+            [src]="cocktail.strDrinkThumb"
+          />
+          <mat-card-content>
+            <br />
+            <p>
+              Is Alcoholic? :
+              {{ cocktail.strAlcoholic ? cocktail.strAlcoholic : "--" }}
+            </p>
+            <p>
+              Category :{{ cocktail.strCategory ? cocktail.strCategory : "--" }}
+            </p>
+            <p>IBA : {{ cocktail.strIBA ? cocktail.strIBA : "--" }}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

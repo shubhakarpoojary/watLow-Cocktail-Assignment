@@ -1,0 +1,164 @@
+<ng-container *ngIf="_cocktailService.cocktailObject">
+  <mat-card>
+  <div fxLayout="row wrap" fxLayoutAlign="center center">
+
+      <div
+        fxFlex="30%"
+        fxFlex.md="50%"
+        fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        fxLayout="column wrap"
+        class="myCard"
+      >
+        <img
+          style="width: 100%"
+          [src]="_cocktailService.cocktailObject.strDrinkThumb"
+          [alt]="_cocktailService.cocktailObject.strDrink"
+        />
+      </div>
+
+      <div
+      fxFlex="25%"
+      fxFlex.md="50%"
+      fxFlex.sm="50%"
+        fxFlex.xs="100%"
+        fxLayout="column wrap"
+        class="myCard"
+      >
+        <div>
+          <p>
+            Is Alcoholic? :
+            {{
+              _cocktailService.cocktailObject.strAlcoholic
+                ? _cocktailService.cocktailObject.strAlcoholic
+                : "--"
+            }}
+          </p>
+          <p>
+            Category :{{
+              _cocktailService.cocktailObject.strCategory
+                ? _cocktailService.cocktailObject.strCategory
+                : "--"
+            }}
+          </p>
+          <p>
+            IBA :
+            {{
+              _cocktailService.cocktailObject.strIBA
+                ? _cocktailService.cocktailObject.strIBA
+                : "--"
+            }}
+          </p>
+
+          <p>
+            Instruction :
+            {{
+              _cocktailService.cocktailObject.strInstructions
+                ? _cocktailService.cocktailObject.strInstructions
+                : "--"
+            }}
+          </p>
+
+          <p>
+            Ingredient List :
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient1">{{
+              _cocktailService.cocktailObject.strIngredient1
+            }}</span>
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient2"
+              >, {{ _cocktailService.cocktailObject.strIngredient2 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient3"
+              >, {{ _cocktailService.cocktailObject.strIngredient3 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient4"
+              >, {{ _cocktailService.cocktailObject.strIngredient4 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient5"
+              >, {{ _cocktailService.cocktailObject.strIngredient5 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient6"
+              >, {{ _cocktailService.cocktailObject.strIngredient6 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient7"
+              >, {{ _cocktailService.cocktailObject.strIngredient7 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient8"
+              >, {{ _cocktailService.cocktailObject.strIngredient8 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient9"
+              >, {{ _cocktailService.cocktailObject.strIngredient9 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient10"
+              >, {{ _cocktailService.cocktailObject.strIngredient10 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient11"
+              >, {{ _cocktailService.cocktailObject.strIngredient11 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient12"
+              >, {{ _cocktailService.cocktailObject.strIngredient12 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient13"
+              >, {{ _cocktailService.cocktailObject.strIngredient13 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient14"
+              >, {{ _cocktailService.cocktailObject.strIngredient14 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strIngredient15"
+              >, {{ _cocktailService.cocktailObject.strIngredient15 }}</span
+            >
+          </p>
+
+          <p>
+            Measure List :
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure1">{{
+              _cocktailService.cocktailObject.strMeasure1
+            }}</span>
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure2"
+              >, {{ _cocktailService.cocktailObject.strMeasure2 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure3"
+              >, {{ _cocktailService.cocktailObject.strMeasure3 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure4"
+              >, {{ _cocktailService.cocktailObject.strMeasure4 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure5"
+              >, {{ _cocktailService.cocktailObject.strMeasure5 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure6"
+              >, {{ _cocktailService.cocktailObject.strMeasure6 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure7"
+              >, {{ _cocktailService.cocktailObject.strMeasure7 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure8"
+              >, {{ _cocktailService.cocktailObject.strMeasure8 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure9"
+              >, {{ _cocktailService.cocktailObject.strMeasure9 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure10"
+              >, {{ _cocktailService.cocktailObject.strMeasure10 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure11"
+              >, {{ _cocktailService.cocktailObject.strMeasure11 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure12"
+              >, {{ _cocktailService.cocktailObject.strMeasure12 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure13"
+              >, {{ _cocktailService.cocktailObject.strMeasure13 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure14"
+              >, {{ _cocktailService.cocktailObject.strMeasure14 }}</span
+            >
+            <span *ngIf="_cocktailService.cocktailObject.strMeasure15"
+              >, {{ _cocktailService.cocktailObject.strMeasure15 }}</span
+            >
+          </p>
+        </div>
+      </div>
+
+  </div>
+</mat-card>
+</ng-container>
