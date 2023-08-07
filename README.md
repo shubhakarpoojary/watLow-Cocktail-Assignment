@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## unit test case
+
+Wrote sample unit test case for cocktail list pages [\src\app\pages\cocktail\cocktail-list\cocktail-list.component.spec.ts]
