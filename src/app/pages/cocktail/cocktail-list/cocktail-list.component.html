@@ -1,3 +1,18 @@
+<div fxLayout="row wrap" class="contentStart">
+  <mat-form-field>
+    <mat-label>Alcohalic Type</mat-label>
+    <mat-select
+      [(ngModel)]="alcohalicType"
+      name="Alcohalic Type"
+      (selectionChange)="filterList(alcohalicType)"
+    >
+      <mat-option *ngFor="let type of alcohalicTypeList" [value]="type.code">
+        {{ type.name }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
 <div fxLayout="column wrap">
   <div fxLayout="row wrap">
     <ng-container *ngFor="let cocktail of cocktailList">
@@ -6,7 +21,9 @@
         fxFlex.md="50%"
         fxFlex.sm="50%"
         fxFlex.xs="100%"
-        fxLayout="column wrap" class="myCard">
+        fxLayout="column wrap"
+        class="myCard"
+      >
         <mat-card class="zoom" (click)="viewCockTaiDetails(cocktail)">
           <mat-card-header>
             <mat-card-title>{{ cocktail.strDrink }}</mat-card-title>
@@ -32,4 +49,12 @@
       </div>
     </ng-container>
   </div>
+</div>
+
+<div *ngIf="alcohalicType && cocktailList.length == 0" fxLayout="row wrap" class="contentCenter">
+  <mat-card>
+    <mat-card-content>
+      <p>No Cocktial Availble!</p>
+    </mat-card-content>
+  </mat-card>
 </div>

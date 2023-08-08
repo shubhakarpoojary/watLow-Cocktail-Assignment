@@ -1,11 +1,17 @@
-
-
 mat-card {
   cursor: pointer;
   padding: 5px;
 }
 
-mat-card-header{
-    margin: auto;
-  }
+mat-card-header {
+  margin: auto;
+}
 
+.contentStart {
+  margin: auto;
+  justify-content: start;
+}
+.contentCenter {
+  margin: auto;
+  justify-content: center;
+}

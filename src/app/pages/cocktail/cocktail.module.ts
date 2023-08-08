@@ -14,6 +14,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { CocktailService } from './cocktail.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     CocktailCategoryComponent,
@@ -29,7 +32,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     FlexLayoutModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatFormFieldModule, MatSelectModule,FormsModule
   ],
   providers: [CocktailService]
 })
