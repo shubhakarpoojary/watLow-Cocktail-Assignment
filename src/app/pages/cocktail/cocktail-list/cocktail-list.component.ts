@@ -51,7 +51,6 @@ export class CocktailListComponent implements OnInit {
   }
 
   filterList(val: string) {
-    //Note: did like this because from API response we ae not able to find any non alcohali drinks , so filtered based on only string "alcoholic"
     if (val === 'all') {
       this.cocktailList = this.tempCocktailList;
     }
