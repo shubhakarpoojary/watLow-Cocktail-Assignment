@@ -24,8 +24,6 @@ export class AppInterceptor implements HttpInterceptor {
       return event;
     }),
     catchError((error: HttpErrorResponse) => {
-      const started = Date.now();
-      const elapsed = Date.now() - started;
       console.log(`Error`,error);
       this.spinner.hide();
       return throwError(error);
