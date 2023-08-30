@@ -9,6 +9,7 @@ import { CocktailService } from './pages/cocktail/cocktail.service';
 import { AppInterceptor } from './app.interceptor';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppCustomPreloader } from './app-custom-reloader';
 @NgModule({
   declarations: [
     AppComponent
@@ -20,7 +21,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
     MatIconModule,
     NgxSpinnerModule
   ],
-  providers: [CocktailService, { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },],
+  providers: [ AppCustomPreloader ,{ provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -34,15 +34,20 @@ export class CocktailListComponent implements OnInit {
   }
 
   getCocktailList(category: string) {
-    this._cocktailService.getCocktailList(category).subscribe((result: any) => {
-      if (result.drinks) {
-        this.cocktailList = result.drinks;
-        this.tempCocktailList = result.drinks;
-        this.alcohalicType = "all";
-      }
-    }, error => {
-      console.log("Error", error)
-    })
+
+    this.cocktailList = this._route.snapshot.data['cocktileList'].drinks;
+    this.tempCocktailList = this._route.snapshot.data['cocktileList'].drinks;
+    this.alcohalicType = "all";
+
+    //   this._cocktailService.getCocktailList(category).subscribe((result: any) => {
+    //     if (result.drinks) {
+    //       this.cocktailList = result.drinks;
+    //       this.tempCocktailList = result.drinks;
+    //       this.alcohalicType = "all";
+    //     }
+    //   }, (error: any) => {
+    //     console.log("Error", error)
+    //   })
   }
 
   viewCockTaiDetails(cockTail: any) {

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CocktailCategoryComponent } from './cocktail-category/cocktail-category.component';
 import { CocktailListComponent } from './cocktail-list/cocktail-list.component';
 import { CocktailDetailsComponent } from './cocktail-details/cocktail-details.component';
+import { cocktileListResolver } from './cocktail-list.reolve';
 
 
 const routes: Routes = [
@@ -12,11 +13,14 @@ const routes: Routes = [
   },
   {
     path: 'list/:category',
-    component: CocktailListComponent
+    component: CocktailListComponent,
+    resolve: { cocktileList: cocktileListResolver },
+
   },
   {
     path: 'details/:category/:drink',
-    component: CocktailDetailsComponent
+    component: CocktailDetailsComponent,
+
   }
 ];
 

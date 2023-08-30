@@ -17,11 +17,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { cocktileListResolver } from 'src/app/pages/cocktail/cocktail-list.reolve';
+import { HellloComponent } from './helllo/helllo.component';
+import { NewComponent } from './new/new.component';
 @NgModule({
+
   declarations: [
     CocktailCategoryComponent,
     CocktailListComponent,
-    CocktailDetailsComponent
+    CocktailDetailsComponent,
+    HellloComponent,
+    NewComponent
   ],
   imports: [
     CommonModule,
@@ -35,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     MatSnackBarModule,
     MatFormFieldModule, MatSelectModule,FormsModule
   ],
-  providers: [CocktailService]
+  providers: [CocktailService,cocktileListResolver],
+
 })
 export class CocktailModule { }
